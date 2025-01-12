@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link
+            href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav
+            class="navbar navbar-expand-lg sticky-top bg-white px-4"
+            id="header"
+        >
+            <div class="container-fluid">
+                <a class="navbar-brand me-auto ms-4" href="#"
+                    >ITPEC<span style="color: #48cae4">Quiz</span></a
+                >
+
+                <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            ITPEC<span style="color: #48cae4">Quiz</span>
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul
+                            class="navbar-nav justify-content-center flex-grow-1 pe-3"
+                        >
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link mx-lg-2"
+                                    aria-current="page"
+                                    href="index.html"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="aboutUs.html"
+                                    >About</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="contact.html"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="register.html" class="login-button">Login</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <div
+            class="m-0 py-5 box-border box-bod min-vh-100 d-flex justify-content-center align-items-center body-bgColor"
+        >
+            <!-- container -->
+            <div
+                class="position-relative bg-white rounded-4 shadow-lg overflow-hidden container_size container-js z-1"
+                style="margin-top: 1.25rem"
+            >
+                <!-- form box login-->
+                <div
+                    class="position-absolute w-50 h-100 d-flex align-items-center text-center z-1 bg-white form-box"
+                >
+                    <!-- form -->
+                    <form class="w-100 needs-validation" novalidate>
+                        <h1 class="mb-4 font-weight_700">Login</h1>
+                        <!-- email -->
+                        <div class="position-relative mb-2 mb-md-4">
+                            <input
+                                type="email"
+                                class="w-100 bg-white border-0 border-bottom border-info-subtle border-3 input_padding outline-none"
+                                name="login-email"
+                                id="login-email"
+                                placeholder="Email"
+                                required
+                            />
+                            <i class="bi bi-envelope-fill input_icons"></i>
+                            <div class="invalid-feedback">
+                                Please enter your username
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="position-relative mb-2 mb-md-4">
+                            <input
+                                type="password"
+                                class="w-100 bg-white border-0 border-bottom border-info-subtle border-3 input_padding outline-none"
+                                name="login-password"
+                                id="login-password"
+                                placeholder="Password"
+                                minlength="8"
+                                required
+                            />
+                            <i class="bi bi-lock-fill input_icons"></i>
+                            <div class="invalid-feedback">
+                                Please enter your password correctly
+                            </div>
+                        </div>
+                        <!-- Forget Password -->
+                        <div class="position-relative mb-4 mt-3">
+                            <button
+                                type="button"
+                                class="border-0 bg-white text-black-50 hover-forgot-text"
+                                data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"
+                            >
+                                Forgot password?
+                            </button>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-100 py-2 rounded shadow border border-2 border-info login_btn-color text-white h6-font font-weight_600"
+                        >
+                            Login
+                        </button>
+                    </form>
+                </div>
+                <!-- form box register-->
+                <div
+                    class="position-absolute w-50 h-100 d-flex align-items-center text-center z-1 bg-white form-box register-box_visibility"
+                >
+                    <!-- form -->
+                    <form class="w-100 needs-validation" novalidate>
+                        <h1 class="mb-4 font-weight_700">Registration</h1>
+                        <!-- Username -->
+                        <div class="position-relative mb-2 mb-md-4">
+                            <input
+                                type="text"
+                                class="w-100 bg-white border-0 border-bottom border-info-subtle border-3 input_padding outline-none"
+                                name="register-username"
+                                id="register-username"
+                                placeholder="Username"
+                                required
+                            />
+                            <i class="bi bi-person-fill input_icons"></i>
+                            <div class="invalid-feedback">
+                                Please enter your username correctly
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="position-relative mb-2 mb-md-4">
+                            <input
+                                type="email"
+                                class="w-100 bg-white border-0 border-bottom border-info-subtle border-3 input_padding outline-none"
+                                name="register-email"
+                                id="register-email"
+                                placeholder="Email"
+                                required
+                            />
+                            <i class="bi bi-envelope-fill input_icons"></i>
+                            <div class="invalid-feedback">
+                                Please enter your email correctly
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="position-relative mb-2 mb-md-4">
+                            <input
+                                type="password"
+                                class="w-100 bg-white border-0 border-bottom border-info-subtle border-3 input_padding outline-none"
+                                name="register-password"
+                                id="register-password"
+                                placeholder="Password"
+                                minlength="8"
+                                required
+                            />
+                            <i class="bi bi-lock-fill input_icons"></i>
+                            <div class="invalid-feedback">
+                                Password must be at least 8 characters.
+                            </div>
+                        </div>
+                        <!-- login button -->
+                        <button
+                            type="submit"
+                            class="w-100 py-2 shadow border border-2 border-info login_btn-color text-white h6-font font-weight_600 mt-3 rounded"
+                        >
+                            Register
+                        </button>
+                    </form>
+                </div>
+                <!-- toggle box register -->
+                <div class="position-absolute w-100 h-100 toggle-box">
+                    <div
+                        class="position-absolute w-50 h-100 d-flex flex-column justify-content-center align-items-center text-white form-box_padding toggle-left toggle-panel font-weight_700"
+                    >
+                        <h1>Hello, Welcome!</h1>
+                        <p>Don't have an account?</p>
+                        <button
+                            class="w-50 py-2 rounded border border-2 border-white btn_bg-color text-white h6-font font-weight_600 register-btn"
+                        >
+                            Register
+                        </button>
+                    </div>
+                    <!-- toggle box login -->
+                    <div
+                        class="position-absolute w-50 h-100 d-flex flex-column justify-content-center align-items-center text-white form-box_padding toggle-right toggle-panel font-weight_700"
+                    >
+                        <h1>Welcome Back!</h1>
+                        <p>Already have an account?</p>
+                        <button
+                            class="w-50 py-2 rounded border border-2 border-white btn_bg-color text-white h6-font font-weight_600 login-btn"
+                        >
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog d-flex align-content-center justify-content-center dialog-width mx-auto"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div
+                            class="w-25 h-25 p-5 rounded-circle bg-primary m-auto question-mark"
+                        ></div>
+                        <h5
+                            class="card-title text-center mb-4 mt-3 font-weight_700 text-primary_color"
+                        >
+                            Forgot Password
+                        </h5>
+                        <p class="text-center text-black-50">
+                            Please enter your email address <br />to reset your
+                            password
+                        </p>
+                        <form action="/reset-password" method="POST">
+                            <div class="form-floating mb-3">
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="floatingInput"
+                                    placeholder="name@example.com"
+                                />
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="px-3 text-white py-2 rounded border border-1 border-danger close_bg-color"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                        <a href="resetPassword.html"
+                            ><button
+                                type="button"
+                                class="px-3 text-white py-2 rounded border border-1 border-primary submit_bg-color"
+                            >
+                                Confirm
+                            </button></a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="py-2 footer-shadow">
+            <div class="container">
+                <div class="row align-items-center border-bottom border-2">
+                    <div
+                        class="col-12 col-lg-3 text-center text-lg-start d-flex align-items-center justify-content-center pb-3 pb-sm-2 pb-lg-0 pb-xl-0"
+                    >
+                        <!-- <p class="fw-light ">Organized by</p> -->
+                        <img
+                            alt="JKT Logo"
+                            class="img-fluid rounded-circle"
+                            height=""
+                            src="images/JKT-logo.jpg"
+                            width="50"
+                        />
+                        <h6 class="fw-bolder ms-2 mb-0">
+                            <span class="fw-light fs-6">Organized by</span
+                            ><br />
+                            JKT Digital Institute
+                        </h6>
+                    </div>
+                    <div class="col-12 col-lg-6 navbar-expand text-center">
+                        <ul
+                            class="list-unstyled d-block d-lg-flex justify-content-center mb-3 mb-lg-0"
+                        >
+                            <li class="nav-item">
+                                <a
+                                    class="d-inline-block text-dark text-decoration-none me-lg-3 mx-3 pb-2 pb-sm-2 pb-lg-0 pb-xl-0"
+                                    href=""
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="d-inline-block text-dark text-decoration-none me-lg-3 mx-3 pb-2 pb-sm-2 pb-lg-0 pb-xl-0"
+                                    href=""
+                                    >About</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="d-inline-block text-dark text-decoration-none me-lg-3 mx-3 pb-2 pb-sm-2 pb-lg-0 pb-xl-0"
+                                    href=""
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-3 text-center text-lg-end pb-2 pb-sm-2 pb-lg-0 pb-xl-0">
+                        <a class="me-2" href=""
+                            ><i class="fa-brands fa-facebook fs-3 text-info"></i
+                        ></a>
+                        <a class="me-2" href=""
+                            ><i class="fa-brands fa-viber fs-3 text-info"></i
+                        ></a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center small text-muted py-1">
+                        &copy; 2024 ITPEC Quiz. All rights reserved
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./login.js"></script>
+    </body>
+</html>

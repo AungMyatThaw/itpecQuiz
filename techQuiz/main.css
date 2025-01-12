@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url("style/home.css");
+@import url("style/aboutUs.css");
+@import url("style/contact.css");
+@import url("style/signinSignup.css");
+@import url("style/quizSelect.css");
+@import url("style/FEQuiz.css");
+
+*{
+    /* font-family: "Quicksand", sans-serif; */
+    margin:0;
+    padding:0;
+}
+
+
+.primary-font{
+    font-family: "Quicksand", sans-serif;
+}
+.secondary-font{
+    font-family: 'Times New Roman', Times, serif;
+}

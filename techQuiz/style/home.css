@@ -1,0 +1,201 @@
+html{
+    scroll-behavior: smooth;
+}
+#header {
+    z-index: 1000;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background:#f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ccc;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.container{
+    position: relative;
+}
+
+#header{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: box-shadow 0.3s, height 0.3s;
+    
+}
+
+.navbar-brand{
+    font-weight: 700;
+    color:black;
+    font-size:24px !important;
+    transition: 0.3s color;
+}
+.login-button{
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid #00D2F5;
+    color:#00D2F5;
+    padding: 8px 19px;
+    transition: color 0.4s linear;
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    margin-left:4px ;
+}
+.login-button:hover{
+    color:white;
+}
+.login-button::after{
+    content: '';
+    position: absolute;
+    background:#00D2F5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+    
+}
+.login-button::after{
+    transform: scaleY(0);
+}
+.login-button:hover::after{
+    transform: scaleY(1);  
+}
+.navbar-toggler{
+    border:none !important;
+    font-size:1.25rem !important;
+}
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow:none !important;
+    outline:none !important;
+}
+.nav-link{
+    color:#666777;
+    font-weight: 500;
+    position: relative;
+}
+.nav-link:hover,.nav-link.active{
+    color: #000 !important;
+}
+
+@media (min-width:991px){
+    .nav-link::before{
+        content:"";
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform: translate(-50%);
+        width:0;
+        height: 3px;
+        border-radius: 10px;
+        background-color:#00D2F5;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+
+    }
+    .nav-link:hover::before, .nav-link.active::before{
+        width:100%;
+        visibility: visible;
+    }
+}
+
+/* get started button */
+.button-19 {
+    appearance: button;
+    background-color: #1f879c;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.button-19:after {
+    background-clip: padding-box;
+    background-color: #48cae4;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.button-19,
+.button-19:focus {
+    user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+    cursor: auto;
+}
+
+.button-19:active {
+    border-width: 4px 0 0;
+    background: none;
+}
+
+/* button shadow */
+.ip-shadow{
+    box-shadow: rgba(0, 0, 0, 0.35) -5px 5px 15px;
+}
+.ip-shadow:hover{
+    box-shadow: rgba(255, 0, 0, 0.543) 5px 5px 15px,rgba(255, 0, 0, 0.543) -5px 5px 15px;
+}
+.fe-shadow{
+    box-shadow: rgba(0, 0, 0, 0.35) -5px 5px 15px;
+}
+.fe-shadow:hover{
+    box-shadow: rgba(4, 177, 10, 0.774) 5px 5px 15px,rgba(4, 177, 10, 0.774) -5px 5px 15px;
+}
+
+@media (max-width: 398px) {
+    .nav-responsive{
+        margin: auto !important;
+    }
+}
